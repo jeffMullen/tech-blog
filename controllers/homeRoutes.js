@@ -11,8 +11,8 @@ router.get('/', async (req, res) => {
         res.status(200).json(posts);
         // render to homepage
 
-    } catch (e) {
-        console.log(e);
+    } catch (err) {
+        console.log(err);
         res.status(500);
     }
 })
@@ -35,13 +35,12 @@ router.get('/post/:id', async (req, res) => {
             ]
         });
 
-        // const post = postData.map(details => details.get({ plain: true }));
         const post = postData.get({ plain: true });
         res.status(200).json(post);
         // render to homepage
 
-    } catch (e) {
-        console.log(e);
+    } catch (err) {
+        console.log(err);
         res.status(500);
     }
 })
