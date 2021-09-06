@@ -8,8 +8,11 @@ router.get('/', async (req, res) => {
         });
         const posts = postData.map(post => post.get({ plain: true }));
 
-        res.status(200).json(posts);
+        // res.status(200).json(posts);
         // render to homepage
+        res.render('homepage', {
+            posts
+        })
 
     } catch (err) {
         console.log(err);

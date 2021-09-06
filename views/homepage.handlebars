@@ -1,0 +1,8 @@
+{{#each posts as |post|}}
+<div class="container">
+    <div class="row">
+        <h2 class="col-8">{{post.title}}</h2>
+        <p class="col-4">{{format_date post.createdAt}}</p>
+    </div>
+</div>
+{{/each}}
