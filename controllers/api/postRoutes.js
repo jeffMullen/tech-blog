@@ -16,9 +16,30 @@ router.post('/', async (req, res) => {
     }
 })
 
+router.put('/:id', async (req, res) => {
+    try {
+        const postData = await Post.update(
+            {
+                title: req.body.title,
+                content: req.body.content
+            },
+            {
+                where: {
+                    id: req.params.id
+                }
+            }
+        )
+        res.status(200).json(postData);
+    } catch {
+        console.log(err);
+        res.status(500);
+    }
+})
+
 router.delete('/:id', async (req, res) => {
     try {
         const postData = await Post.findByPk(req.params.id);
+
         await postData.destroy();
         res.status(200).json({ message: 'Post has been deleted!' });
     } catch (err) {
