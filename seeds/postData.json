@@ -1,7 +1,12 @@
 [
     {
-        "title": "Post test",
-        "content": "Post content",
+        "title": "Johnny Post",
+        "content": "This is a post by Johnny",
         "user_id": "1"
+    },
+    {
+        "title": "Tracey Post",
+        "content": "This is a post by Tracey",
+        "user_id": "2"
     }
 ]

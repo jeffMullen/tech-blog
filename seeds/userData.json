@@ -1,7 +1,14 @@
 [
     {
+        "id": "1",
         "username": "Johnny",
         "email": "johnny@apple.com",
         "password": "appleseed"
+    },
+    {
+        "id": "2",
+        "username": "Tracey",
+        "email": "tracey@email.com",
+        "password": "doinggreat"
     }
 ]

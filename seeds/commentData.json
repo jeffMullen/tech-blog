@@ -1,7 +1,17 @@
 [
     {
-        "content": "Comment comment comment test",
+        "content": "Comment by Johnny",
         "user_id": "1",
+        "post_id": "2"
+    },
+    {
+        "content": "Comment by Tracey",
+        "user_id": "2",
+        "post_id": "1"
+    },
+    {
+        "content": "Another comment by Tracey",
+        "user_id": "2",
         "post_id": "1"
     }
 ]
