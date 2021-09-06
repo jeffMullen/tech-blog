@@ -7,17 +7,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
         integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    <link rel="stylesheet" href="./css/style.css">
     <title>Document</title>
 </head>
 
 <body>
-    <header>
-        <h1>The Tech Blog</h1>
-        <nav>
-            <li><a href="/">Home</a></li>
-            <li><a href="/dashboard">Dashboard</a></li>
-            <li><a href="/login">Login</a></li>
+    <header class="container">
+        <nav class="row">
+            <div class="row col-7">
+                <li class="col-4"><a href="/">Home</a></li>
+                <li class="col-4"><a href="/dashboard">Dashboard</a></li>
+                <li class="col-4"><a href="/login">Login</a></li>
+            </div>
         </nav>
+        <div class="row">
+            <h1>The Tech Blog</h1>
+        </div>
     </header>
     <main>
         {{{body}}}

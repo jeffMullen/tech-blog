@@ -1,0 +1,32 @@
+:root {
+    --dark-main: #3d405b;
+    --light-main: #a7d5bf;
+}
+
+
+header {
+    padding: 100px;
+    background-color: var(--dark-main);
+    color: var(--dark-main);
+}
+
+h1 {
+    background-color: var(--light-main);
+    padding: 3px 10px;
+}
+
+nav {
+    padding: 20px 3px;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    color: var(--light-main);
+}
+
+main {
+    margin-top: 50px;
+}
