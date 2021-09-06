@@ -23,13 +23,13 @@ router.get('/post/:id', async (req, res) => {
             include: [
                 {
                     model: User,
-                    attributes: { exclude: ['password'] }
+                    attributes: { exclude: 'password' }
                 },
                 {
                     model: Comment,
                     include: [{
                         model: User,
-                        attribues: { exclude: 'password' }
+                        attributes: { exclude: 'password' }
                     }]
                 }
             ]
