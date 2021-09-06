@@ -13,6 +13,7 @@ router.get('/:id', async (req, res) => {
 
         const user = userData.get({ plain: true });
         res.status(200).json(user);
+        // render to dashboard page
 
     } catch (err) {
         console.log(err);
