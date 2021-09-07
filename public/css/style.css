@@ -3,11 +3,11 @@
     --light-main: #a7d5bf;
 }
 
-
 header {
-    padding: 100px;
+    padding: 15px;
     background-color: var(--dark-main);
     color: var(--dark-main);
+    margin: 0px;
 }
 
 h1 {
@@ -16,14 +16,17 @@ h1 {
 }
 
 nav {
-    padding: 20px 3px;
-}
-
-li {
-    list-style: none;
+    padding: 0 0 20px 3px;
 }
 
 a {
+    color: var(--light-main);
+    /* display: flex;
+    justify-content: center; */
+}
+
+a:hover {
+    text-decoration: none;
     color: var(--light-main);
 }
 

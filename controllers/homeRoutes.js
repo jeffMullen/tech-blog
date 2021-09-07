@@ -4,12 +4,15 @@ const { Post, Comment, User } = require('../models');
 router.get('/', async (req, res) => {
     try {
         const postData = await Post.findAll({
-            include: [{ model: Comment }]
+            include: [{ model: Comment }, {
+                model: User,
+                attributes: {
+                    exclude: ['password', 'email', 'id']
+                }
+            }]
         });
         const posts = postData.map(post => post.get({ plain: true }));
 
-        // res.status(200).json(posts);
-        // render to homepage
         res.render('homepage', {
             posts
         })
@@ -18,7 +21,7 @@ router.get('/', async (req, res) => {
         console.log(err);
         res.status(500);
     }
-})
+});
 
 router.get('/post/:id', async (req, res) => {
     try {
@@ -46,7 +49,7 @@ router.get('/post/:id', async (req, res) => {
         console.log(err);
         res.status(500);
     }
-})
+});
 
 router.get('/login', (req, res) => {
     if (req.session.loggedIn) {
@@ -54,6 +57,6 @@ router.get('/login', (req, res) => {
         return;
     }
     res.render('login');
-})
+});
 
 module.exports = router;
