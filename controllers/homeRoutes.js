@@ -61,6 +61,12 @@ router.get('/post/:id', async (req, res) => {
 // Dashboard route
 router.get('/dashboard/:id', async (req, res) => {
     try {
+        // Make user can only see their own dashboard
+        if (req.session.userId !== parseInt(req.params.id)) {
+            res.redirect('/login');
+            return;
+        }
+
         const userData = await User.findByPk(req.params.id, {
             include: {
                 model: Post,
