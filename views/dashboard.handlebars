@@ -1,11 +1,13 @@
 {{#each user.posts as |post|}}
-<div class="container">
-    <div class="row post-heading">
-        <h2 class="col-8">{{post.title}}</h2>
-        <p class="col-4">Posted by {{post.user.username}} on {{format_date post.createdAt}}</p>
+<a href="/post/{{post.id}}" class="post">
+    <div class="container">
+        <div class="row post-heading">
+            <h2 class="col-8">{{post.title}}</h2>
+            <p class="col-4">Posted by {{post.user.username}} on {{format_date post.createdAt}}</p>
+        </div>
+        <div class="row">
+            <p class="col-12">{{post.content}}</p>
+        </div>
     </div>
-    <div class="row">
-        <p class="col-12">{{post.content}}</p>
-    </div>
-</div>
+</a>
 {{/each}}

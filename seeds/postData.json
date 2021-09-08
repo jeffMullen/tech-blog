@@ -8,5 +8,10 @@
         "title": "Tracey Post",
         "content": "This is a post by Tracey",
         "user_id": "2"
+    },
+    {
+        "title": "Barold Post",
+        "content": "This is a post by Barold",
+        "user_id": "5"
     }
 ]

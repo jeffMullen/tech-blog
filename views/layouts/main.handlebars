@@ -16,10 +16,11 @@
         <nav class="row">
             <div class="row col-7">
                 <a class="col-4" href="/">Home</a>
-                <a class="col-4" href="/dashboard">Dashboard</a>
                 {{#if loggedIn}}
+                <a class="col-4" href="/dashboard/{{userId}}">Dashboard</a>
                 <a href="/" id="logout" class="col-4">Logout</a>
                 {{else}}
+                <a class="col-4" href="/login">Dashboard</a>
                 <a class="col-4" href="/login">Login</a>
                 {{/if}}
             </div>
