@@ -1,6 +1,7 @@
 const router = require('express').Router();
 const { Post, Comment, User } = require('../models');
 
+// Get all posts on homepage load
 router.get('/', async (req, res) => {
     try {
         const postData = await Post.findAll({
@@ -25,6 +26,7 @@ router.get('/', async (req, res) => {
     }
 });
 
+// Look at one post
 router.get('/post/:id', async (req, res) => {
     try {
         const postData = await Post.findByPk(req.params.id, {
@@ -85,6 +87,19 @@ router.get('/dashboard/:id', async (req, res) => {
             userId: req.session.userId
         })
 
+    } catch (err) {
+        console.log(err);
+        res.status(500);
+    }
+})
+
+// New post page
+router.get('/new-post', (req, res) => {
+    try {
+        res.render('createPost', {
+            loggedIn: req.session.loggedIn,
+            userId: req.session.userId
+        })
     } catch (err) {
         console.log(err);
         res.status(500);
