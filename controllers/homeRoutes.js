@@ -61,15 +61,21 @@ router.get('/post/:id', async (req, res) => {
 router.get('/dashboard/:id', async (req, res) => {
     try {
         const userData = await User.findByPk(req.params.id, {
-            include: { model: Post },
+            include: {
+                model: Post,
+                include: { model: User }
+            },
             attributes: {
                 exclude: 'password'
             }
         })
 
         const user = userData.get({ plain: true });
-        res.status(200).json(user);
-        // render to dashboard page
+
+        res.render('dashboard', {
+            user,
+            loggedIn: req.session.loggedIn
+        })
 
     } catch (err) {
         console.log(err);
