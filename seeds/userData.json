@@ -10,5 +10,11 @@
         "username": "Tracey",
         "email": "tracey@email.com",
         "password": "doinggreat"
+    },
+    {
+        "id": "3",
+        "username": "Barry",
+        "email": "barry@bluejeans.com",
+        "password": "barrybluejeans"
     }
 ]
