@@ -7,7 +7,8 @@ const updatePost = async (event) => {
 
 const deletePost = async (event) => {
     event.preventDefault();
-    const postId = document.querySelector('#postId').innerHTML;
+    const postId = event.target.getAttribute('data-id');
+    const userId = event.target.getAttribute('data-user-id');
 
     const response = await fetch(`/api/dashboard/posts/${postId}`, {
         method: 'DELETE',

@@ -18,7 +18,7 @@ router.post('/posts', async (req, res) => {
 })
 
 // Update a post
-router.put('dashboard/posts/:id', async (req, res) => {
+router.put('/dashboard/posts/:id', async (req, res) => {
     try {
         const postData = await Post.update(
             {
@@ -39,9 +39,11 @@ router.put('dashboard/posts/:id', async (req, res) => {
 })
 
 // Delete a post
-router.delete('dashboard/posts/:id', async (req, res) => {
+router.delete('/dashboard/posts/:id', async (req, res) => {
     try {
         const postData = await Post.findByPk(req.params.id);
+
+        console.log(postData);
 
         await postData.destroy();
         res.status(200).json({ message: 'Post has been deleted!' });
