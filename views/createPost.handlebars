@@ -15,8 +15,15 @@
                     <label for="newPostContent">Content</label>
                     <textarea type="text" class="form-control" id="newPostContent"></textarea>
                 </div>
-                <button type="submit" class="btn btn-success">Post</button>
+                {{#if loggedIn}}
+                <div>
+                    <p id="userId">{{userId}}</p>
+                </div>
+                {{/if}}
+                <button type="submit" class="btn btn-success" id="submitPost">Post</button>
             </form>
         </div>
     </div>
 </div>
+
+<script src="/js/post.js"></script>
