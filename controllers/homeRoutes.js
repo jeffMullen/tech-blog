@@ -93,6 +93,44 @@ router.get('/dashboard/:id', async (req, res) => {
     }
 })
 
+// Look at one dashboard post
+router.get('/dashboard/posts/:id', async (req, res) => {
+    try {
+        const postData = await Post.findByPk(req.params.id, {
+            include: [
+                {
+                    model: User,
+                    attributes: { exclude: 'password' }
+                },
+                {
+                    model: Comment,
+                    include: [{
+                        model: User,
+                        attributes: { exclude: 'password' }
+                    }]
+                }
+            ]
+        });
+
+        if (!postData) {
+            res.status(400).json({ message: 'No post with that id' })
+            return;
+        }
+
+        const post = postData.get({ plain: true });
+        // res.status(200).json(post);
+        res.render('dashboardPost', {
+            post,
+            loggedIn: req.session.loggedIn,
+            userId: req.session.userId
+        })
+
+    } catch (err) {
+        console.log(err);
+        res.status(500);
+    }
+});
+
 // New post page
 router.get('/new-post', (req, res) => {
     try {

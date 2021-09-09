@@ -1,9 +1,10 @@
+const submitCreate = document.querySelector('#submitPost');
+
 const createPost = async (event) => {
     event.preventDefault();
 
     const title = document.querySelector('#newPostTitle').value.trim();
     const content = document.querySelector('#newPostContent').value.trim();
-    const userId = document.querySelector('#userId').innerHTML;
 
     if (title && content) {
         const response = await fetch('/api/posts', {
@@ -24,6 +25,4 @@ const createPost = async (event) => {
     };
 };
 
-document
-    .querySelector('#submitPost')
-    .addEventListener('click', createPost);
+submitCreate.addEventListener('click', createPost);
