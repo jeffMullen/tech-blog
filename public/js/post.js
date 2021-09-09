@@ -5,6 +5,7 @@ const createPost = async (event) => {
 
     const title = document.querySelector('#newPostTitle').value.trim();
     const content = document.querySelector('#newPostContent').value.trim();
+    const userId = event.target.getAttribute('data-id');
 
     if (title && content) {
         const response = await fetch('/api/posts', {

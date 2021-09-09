@@ -15,12 +15,7 @@
                     <label for="newPostContent">Content</label>
                     <textarea type="text" class="form-control" id="newPostContent"></textarea>
                 </div>
-                {{#if loggedIn}}
-                <div>
-                    <p id="userId">{{userId}}</p>
-                </div>
-                {{/if}}
-                <button type="submit" class="btn btn-success" id="submitPost">Post</button>
+                <button type="submit" data-id="{{userId}}" class="btn btn-success" id="submitPost">Post</button>
             </form>
         </div>
     </div>
