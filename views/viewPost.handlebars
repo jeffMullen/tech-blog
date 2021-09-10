@@ -7,6 +7,19 @@
         <p class="col-12">{{post.content}}</p>
     </div>
 </div>
+<div class="container">
+    <div class="post-heading">
+        <form>
+            <div class="form-group">
+                <label for="commentContent">Comment</label>
+                <textarea type="text" class="form-control" id="commentContent"></textarea>
+                <button class="btn btn-success">Submit Comment</button>
+            </div>
+        </form>
+    </div>
+</div>
+
+
 
 {{#each post.comments as |comment|}}
 {{> comments}}
