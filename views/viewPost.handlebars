@@ -13,14 +13,15 @@
             <div class="form-group">
                 <label for="commentContent">Comment</label>
                 <textarea type="text" class="form-control" id="commentContent"></textarea>
-                <button class="btn btn-success">Submit Comment</button>
+                <button id="commentSubmit" class="btn btn-success" data-post-id="{{post.id}}"
+                    data-user-id="{{userId}}">Submit Comment</button>
             </div>
         </form>
     </div>
 </div>
 
-
-
 {{#each post.comments as |comment|}}
 {{> comments}}
 {{/each}}
+
+<script src="/js/comment.js"></script>
