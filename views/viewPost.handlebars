@@ -1,0 +1,13 @@
+<div class="container post">
+    <div class="row post-heading">
+        <h2 class="col-8">{{post.title}}</h2>
+        <p class="col-4">Posted by {{post.user.username}} on {{format_date post.createdAt}}</p>
+    </div>
+    <div class="row">
+        <p class="col-12">{{post.content}}</p>
+    </div>
+</div>
+
+{{#each post.comments as |comment|}}
+{{> comments}}
+{{/each}}

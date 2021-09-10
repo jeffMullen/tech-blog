@@ -27,7 +27,7 @@ router.get('/', async (req, res) => {
 });
 
 // Look at one post
-router.get('/post/:id', async (req, res) => {
+router.get('/posts/:id', async (req, res) => {
     try {
         const postData = await Post.findByPk(req.params.id, {
             include: [
@@ -51,8 +51,13 @@ router.get('/post/:id', async (req, res) => {
         }
 
         const post = postData.get({ plain: true });
-        res.status(200).json(post);
-        // render to homepage
+        console.log(post);
+        // res.status(200).json(post);
+        res.render('viewPost', {
+            post,
+            loggedIn: req.session.loggedIn,
+            userId: req.session.userId
+        })
 
     } catch (err) {
         console.log(err);
