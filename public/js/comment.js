@@ -4,7 +4,6 @@ const createComment = async (event) => {
     event.preventDefault();
 
     const postId = event.target.getAttribute('data-post-id');
-    const userId = event.target.getAttribute('data-user-id');
     const content = document.querySelector('#commentContent');
 
     if (content.value !== '') {
@@ -12,7 +11,6 @@ const createComment = async (event) => {
             method: 'POST',
             body: JSON.stringify({
                 content: content.value.trim(),
-                user_id: userId,
                 post_id: postId
             }),
             headers: { 'Content-Type': 'application/json' }
