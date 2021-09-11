@@ -1,27 +1,31 @@
 <div class="container post">
-    <div class="row post-heading">
+    <div class="row post-heading d-flex">
         <h2 class="col-8">{{post.title}}</h2>
-        <p class="col-4">Posted by {{post.user.username}} on {{format_date post.createdAt}}</p>
+        <p class="col-4 align-self-center d-flex justify-content-end post-date">Posted by {{post.user.username}} on
+            {{format_date post.createdAt}}</p>
     </div>
     <div class="row">
-        <p class="col-12">{{post.content}}</p>
+        <p class="col-12 post-content">{{post.content}}</p>
     </div>
 </div>
 <div class="container">
-    <div class="post-heading">
-        <form>
-            <div class="form-group">
-                <label for="commentContent">Comment</label>
-                <textarea type="text" class="form-control" id="commentContent"></textarea>
-                <button id="commentSubmit" class="btn btn-success" data-post-id="{{post.id}}"
-                    data-user-id="{{userId}}">Submit Comment</button>
-            </div>
-        </form>
+    <div class="row d-flex flex-row-reverse">
+        <div class="post-heading col-6">
+            <form>
+                <div class="form-group">
+                    <label for="commentContent">Comment</label>
+                    <textarea type="text" class="form-control" id="commentContent"></textarea>
+                    <button id="commentSubmit" class="btn btn-success" data-post-id="{{post.id}}"
+                        data-user-id="{{userId}}">Submit Comment</button>
+                </div>
+            </form>
+        </div>
+        <div class="col-6">
+            {{#each post.comments as |comment|}}
+            {{> comments}}
+            {{/each}}
+        </div>
     </div>
 </div>
-
-{{#each post.comments as |comment|}}
-{{> comments}}
-{{/each}}
 
 <script src="/js/comment.js"></script>

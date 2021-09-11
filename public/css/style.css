@@ -35,16 +35,17 @@ main {
 }
 
 h2 {
-    font-size: 20px;
+    font-size: 24px;
 }
 
-.post .container {
+/* POST STYLES */
+.post, .comment {
     color: black;
     border: 3px solid var(--dark-main);
     margin: 20px auto;
 }
 
-.post-heading {
+.post-heading, .comment-heading {
     background: var(--dark-main);
     color: var(--light-main);
 }
@@ -57,4 +58,23 @@ h2 {
 
 .post-content {
     margin-top: 5px;
+    height: 50px;
+}
+
+/* COMMENT STYLES */
+.comment {
+    width: 90%;
+    padding: 0;
+}
+
+.comment-heading {
+    height: 20px;
+}
+
+.comment-body {
+    padding: 10px 15px;
+}
+
+.comment-date {
+    font-style: italic;
 }
