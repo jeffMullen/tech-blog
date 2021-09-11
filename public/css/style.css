@@ -33,3 +33,28 @@ a:hover {
 main {
     margin-top: 50px;
 }
+
+h2 {
+    font-size: 20px;
+}
+
+.post .container {
+    color: black;
+    border: 3px solid var(--dark-main);
+    margin: 20px auto;
+}
+
+.post-heading {
+    background: var(--dark-main);
+    color: var(--light-main);
+}
+
+.post-date {
+    font-size: 14px;
+    margin-bottom: 5px;
+    font-style: italic;
+}
+
+.post-content {
+    margin-top: 5px;
+}
