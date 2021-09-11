@@ -39,13 +39,13 @@ h2 {
 }
 
 /* POST STYLES */
-.post, .comment {
+.post, .comment, .create-comment {
     color: black;
     border: 3px solid var(--dark-main);
     margin: 20px auto;
 }
 
-.post-heading, .comment-heading {
+.post-heading, .comment-heading, .create-comment-heading {
     background: var(--dark-main);
     color: var(--light-main);
 }
@@ -71,10 +71,19 @@ h2 {
     height: 20px;
 }
 
-.comment-body {
+.comment-body, .create-comment-body {
     padding: 10px 15px;
 }
 
 .comment-date {
     font-style: italic;
+}
+
+/* Comment Entry Field */
+.create-comment {
+    padding: 0;
+}
+
+.create-comment-heading {
+    height: 20px;
 }
