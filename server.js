@@ -16,8 +16,8 @@ const PORT = process.env.PORT || 3001;
 const sess = {
     secret: process.env.SESSION_SECRET,
     cookie: {
-        // 6 minutes seconds in milliseconds
-        maxAge: 360000
+        // 1.5 minutes in milliseconds
+        maxAge: 90000
     },
     resave: false,
     saveUninitialized: true,

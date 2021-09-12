@@ -93,6 +93,10 @@ textarea {
     margin-bottom: 25px;
 }
 
+#loginToComment {
+    margin: 15px;
+}
+
 /* Create Post Styles */
 #newPost {
 width: 60%;

@@ -20,6 +20,12 @@
                         data-user-id="{{userId}}">Submit Comment</button>
                 </div>
             </form>
+            {{#if loggedIn}}
+            {{else}}
+            <div id="loginToComment">
+                <p>Please log in to leave a comment</p>
+            </div>
+            {{/if}}
         </div>
         <div class="col-6">
             {{#each post.comments as |comment|}}
