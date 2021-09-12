@@ -1,17 +1,27 @@
 [
     {
-        "content": "Comment by Johnny",
+        "content": "This is great!",
         "user_id": "1",
         "post_id": "2"
     },
     {
-        "content": "Comment by Tracey",
+        "content": "That makes sense",
         "user_id": "2",
         "post_id": "1"
     },
     {
-        "content": "Another comment by Tracey",
+        "content": "Well I'll be!",
         "user_id": "2",
         "post_id": "1"
+    },
+    {
+        "content": "Well isn't that nice!",
+        "user_id": "1",
+        "post_id": "3"
+    },
+    {
+        "content": "It's a pretty nice tool for sure",
+        "user_id": "2",
+        "post_id": "4"
     }
 ]

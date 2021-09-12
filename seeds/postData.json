@@ -1,32 +1,22 @@
 [
     {
-        "title": "Johnny Post",
-        "content": "This is a post by Johnny",
+        "title": "A new way of developing",
+        "content": "Handlebars is a templating engine that allows you to dynamically add data from a database to a web page",
         "user_id": "1"
     },
     {
-        "title": "Tracey Post",
-        "content": "This is a post by Tracey",
+        "title": "JavaScript",
+        "content": "JavaScript is an extremely powerful programming language that can be used both on the front end and the back end of web pages.",
         "user_id": "2"
     },
     {
-        "title": "Johnny Post",
-        "content": "This is a post by Johnny",
+        "title": "CSS frameworks",
+        "content": "CSS frameworks such as Bootstrap, Materialize, and Foundation can be used to quickly format the layout of your UI.",
         "user_id": "1"
     },
     {
-        "title": "Tracey Post",
-        "content": "This is a post by Tracey",
-        "user_id": "2"
-    },
-    {
-        "title": "Johnny Post",
-        "content": "This is a post by Johnny",
-        "user_id": "1"
-    },
-    {
-        "title": "Tracey Post",
-        "content": "This is a post by Tracey",
+        "title": "ORMs",
+        "content": "Sequelize is an ORM(object relational mapping) that allows you to make database queries with ease as a JavaScript developer.",
         "user_id": "2"
     }
 ]
