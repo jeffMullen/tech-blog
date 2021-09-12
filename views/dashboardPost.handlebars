@@ -1,33 +1,30 @@
-<div class="container">
+<div class="container post">
+    <div class="row post-heading d-flex" data-id="{{post.id}}" data-user-id="{{post.user_id}}">
+        <h2 id="former-title" class="col-6">{{post.title}}</h2>
+        <p class="col-6 align-self-center d-flex justify-content-end post-date">Posted by
+            {{post.user.username}} on {{format_date post.createdAt}}</p>
+    </div>
     <div class="row">
-        <div class="col-12 d-flex justify-content-center">
-            <form>
-                <div class="row post-heading" data-id="{{post.id}}" data-user-id="{{post.user_id}}">
-                    <h2 id="former-title" class="col-8">{{post.title}}</h2>
-                    <p class="col-4">Posted by {{post.user.username}} on {{format_date post.createdAt}}</p>
+        <form id="alterPostBody" class="col-12">
+            <div class="form-group">
+                <label for="newPostTitle">Title</label>
+                <input type="text" class="form-control" id="newPostTitle" placeholder="{{post.title}}">
+            </div>
+            <div class="form-group">
+                <label for="newPostContent">Content</label>
+                <textarea type="text" class="form-control" id="newPostContent">{{post.content}}</textarea>
+            </div>
+            <div class="row">
+                <div class="col-6 d-flex justify-content-end">
+                    <button id="updatePost" class="btn btn-success">Update</button>
                 </div>
-                <div class="form-group">
-                    <label for="newPostTitle">Title</label>
-                    <input type="text" class="form-control" id="newPostTitle" placeholder="{{post.title}}">
+                <div class="col-6">
+                    <button id="deletePost" class="btn btn-danger">Delete</button>
                 </div>
-                <div class="form-group">
-                    <label for="newPostContent">Content</label>
-                    <textarea type="text" class="form-control" id="newPostContent">{{post.content}}</textarea>
-                </div>
-                <div class="row">
-                    <div class="col-6 d-flex justify-content-end">
-                        <button id="updatePost" class="btn btn-success">Update</button>
-                    </div>
-                    <div class="col-6">
-                        <button id="deletePost" class="btn btn-danger">Delete</button>
-                    </div>
-                </div>
-            </form>
-        </div>
+            </div>
+        </form>
     </div>
 </div>
-
-
 
 
 <script src="/js/alterPost.js"></script>

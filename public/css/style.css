@@ -71,7 +71,7 @@ h2 {
     height: 20px;
 }
 
-.comment-body, .create-comment-body, .create-post-body {
+.comment-body, .create-comment-body, .create-post-body, #alterPostBody {
     padding: 10px 15px;
 }
 
