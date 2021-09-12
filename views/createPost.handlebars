@@ -7,15 +7,18 @@
     <div class="row">
         <div class="col-12 d-flex justify-content-center">
             <form id="newPost">
-                <div class="form-group">
-                    <label for="newPostTitle">Title</label>
-                    <input type="text" class="form-control" id="newPostTitle">
+                <div class="create-post-heading"></div>
+                <div class="create-post-body">
+                    <div class="form-group">
+                        <label for="newPostTitle">Title</label>
+                        <input type="text" class="form-control" id="newPostTitle">
+                    </div>
+                    <div class="form-group">
+                        <label for="newPostContent">Content</label>
+                        <textarea type="text" class="form-control" id="newPostContent"></textarea>
+                    </div>
+                    <button type="submit" data-id="{{userId}}" class="btn btn-success" id="submitPost">Post</button>
                 </div>
-                <div class="form-group">
-                    <label for="newPostContent">Content</label>
-                    <textarea type="text" class="form-control" id="newPostContent"></textarea>
-                </div>
-                <button type="submit" data-id="{{userId}}" class="btn btn-success" id="submitPost">Post</button>
             </form>
         </div>
     </div>

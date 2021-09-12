@@ -39,13 +39,13 @@ h2 {
 }
 
 /* POST STYLES */
-.post, .comment, .create-comment {
+.post, .comment, .create-comment, #newPost {
     color: black;
     border: 3px solid var(--dark-main);
     margin: 20px auto;
 }
 
-.post-heading, .comment-heading, .create-comment-heading {
+.post-heading, .comment-heading, .create-comment-heading, .create-post-heading {
     background: var(--dark-main);
     color: var(--light-main);
 }
@@ -67,11 +67,11 @@ h2 {
     padding: 0;
 }
 
-.comment-heading {
+.comment-heading, .create-post-heading {
     height: 20px;
 }
 
-.comment-body, .create-comment-body {
+.comment-body, .create-comment-body, .create-post-body {
     padding: 10px 15px;
 }
 
@@ -92,3 +92,9 @@ h2 {
 textarea {
     margin-bottom: 25px;
 }
+
+/* Create Post Styles */
+#newPost {
+width: 60%;
+}
+
