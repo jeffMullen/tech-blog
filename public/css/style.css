@@ -82,8 +82,13 @@ h2 {
 /* Comment Entry Field */
 .create-comment {
     padding: 0;
+    height: 225px;
 }
 
 .create-comment-heading {
     height: 20px;
+}
+
+textarea {
+    margin-bottom: 25px;
 }
